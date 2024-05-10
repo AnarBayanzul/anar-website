@@ -1,0 +1,10 @@
+@import url("colors.css");
+
+html {
+    background: var(--background-primary);
+    color: var(--foreground-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}

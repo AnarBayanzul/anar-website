@@ -1,0 +1,8 @@
+:root {
+    --foreground-primary:       #ddddddff;
+    --background-primary:       rgb(40, 40, 40);
+    --foreground-secondary:     #aaaaaaff;
+    --background-secondary:     #1f1f1fff;
+    --accent-primary:           rgb(85, 196, 216);
+    --accent-secondary:         rgb(70, 137, 150);
+}
