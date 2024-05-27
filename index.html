@@ -1,19 +1,33 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
     <head>
-        <!-- <link rel="stylesheet" href="/css/style.css"> -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <!-- <link rel="icon" type="image/x-icon" href="images/favicon.jpg" -->
-
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="my-colors.css">
+        <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.jpg" -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>About Anar</title>
     </head>
 
     <body>
         <div>
-            <header class="py-3 mb-4 border-bottom">
+            <header class="py-3 mb-4 border-bottom text-bg-dark">
                 <div class="container">
-                    <h1>Anar Bayanzul</h1>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h1 class="text-my_indigo">Anar Bayanzul</h1>
+                        </div>
+                        <div class="col-md-auto">
+                            <a href="https://github.com/AnarBayanzul"><i class="text-my_indigo display-6 bi bi-github"></i></a>
+                        </div>
+                        <div class="col-md-auto">
+                            <a href="https://www.linkedin.com/in/anar-bayanzul-68a987287/"><i class="text-my_indigo display-6 bi bi-linkedin"></i></a>
+                        </div>
+                        <div class="col-md-auto">
+                            <a href="mailto: anar.bayanzul@gmail.com"><i class="text-my_indigo display-6 bi bi-envelope"></i></a>
+                        </div>
+                    </div>
                 </div>
             </header>
         </div>
@@ -21,55 +35,195 @@
         <div class="container">
             <ul class="nav justify-content-center nav-underline">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/index.html">About Me</a>
+                    <a class="nav-link text-my_blue active" href="/index.html">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/projects.html">Projects</a>
+                    <a class="nav-link text-secondary" href="/projects.html">Projects</a>
                 </li>    
                 <li class="nav-item">
-                    <a class="nav-link" href="/contact.html">Contact</a>
+                    <a class="nav-link text-secondary" href="/static/Resume 2024 Mar.pdf">Resume</a>
                 </li>
             </ul>
         </div>
 
+        <br>
 
         <main>
             <div class="container">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-md-4">
                         <div class="container text-center">
-                            <div class="card">
-                                <img src="..." class="card-img-top" alt="...">
+                            <div class="card text-bg-dark border-light">
+                                <img src="static/images/profile_image.jpg" class="card-img-top" alt="Profile Image">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <h5 class="card-title text-my_indigo">About me</h5>
+                                    <p class="card-text"><b class="text-my_light_blue">Anar Bayanzul</b> is currently a senior at the University of Notre Dame working to earn a Bachelor of Science in Computer Science. He has skills and experience in computer graphics and software development.</p>
                                 </div>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Major: Computer Science</li>
-                                    <li class="list-group-item">Minor: Studio Art</li>
-                                    <li class="list-group-item">University of Notre Dame</li>
-                                    <li class="list-group-item">Class of 2025</li>
+                                    <li class="list-group-item text-bg-dark border-light"><b class="text-my_light_blue">Major:</b> Computer Science</li>
+                                    <li class="list-group-item text-bg-dark border-light"><b class="text-my_light_blue">Minor:</b> Studio Art</li>
+                                    <li class="list-group-item text-bg-dark border-light"><b class="text-my_light_blue">University of Notre Dame</b></li>
+                                    <li class="list-group-item text-bg-dark border-light"><b class="text-my_light_blue">Class of 2025</b></li>
+                                    <li class="list-group-item text-bg-dark border-light">Westminster, CO</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="card bg-light border-light col-md-8">
 
-                    </div>
-                    <div class="col">
+                        <div class="container">
+                            <h5 class="display-5 text-center"><b>Experience</b></h5>
+                            <div class="row">
+                                <div class="col-md-3 lead text-bg-light text-my_blue align-middle"><b>Present</b></div>
+                                <div class="col lead text-bg-light text-my_blue">
+                                    <div class="accordion accordion-flush">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTA" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                    <b class="lead font-weight-strong">Teacher's Assistant</b>
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseTA" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 lead text-bg-light text-my_blue align-middle"><b>2024</b></div>
+                                <div class="col lead text-bg-light text-my_blue">
+                                    <div class="accordion accordion-flush">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOS" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                    <b class="lead font-weight-strong">Open Source</b>
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseOS" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 lead text-bg-light text-my_blue align-middle"><b>2023</b></div>
+                                <div class="col lead text-bg-light text-my_blue">
+                                    <div class="accordion accordion-flush">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseAbroad" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                    <b class="lead font-weight-strong">Study Abroad</b>
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseAbroad" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="container">
+                            <h5 class="display-5 text-center"><b>Awards</b></h5>
+                            <div class="row">
+                                <div class="col-md-5 lead text-bg-light text-my_blue align-middle"><b>2023 - 2024</b></div>
+                                <div class="col lead text-bg-light text-my_blue">
+                                    <div class="accordion accordion-flush">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseDean" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                    <b class="lead font-weight-strong">Dean's List</b>
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseDean" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5 lead text-bg-light text-my_blue align-middle"><b>2021 and 2022</b></div>
+                                <div class="col lead text-bg-light text-my_blue">
+                                    <div class="accordion accordion-flush">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseInnovate" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                    <b class="lead font-weight-strong">Innovate-O-Thon</b>
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseInnovate" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5 lead text-bg-light text-my_blue align-middle"><b>2022</b></div>
+                                <div class="col lead text-bg-light text-my_blue">
+                                    <div class="accordion accordion-flush">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseHack" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                    <b class="lead font-weight-strong">Hackathon</b>
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseHack" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5 lead text-bg-light text-my_blue align-middle"><b>2021</b></div>
+                                <div class="col lead text-bg-light text-my_blue">
+                                    <div class="accordion accordion-flush">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseVal" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                    <b class="lead font-weight-strong">High School Valedictorian</b>
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseVal" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
 
                     </div>
                 </div>
             </div>
 
 
+                        <!--
+                        TODO:
+                        - fill out description of dropdowns
 
+                        TODO: Skills column:
+                        - Capable in Three.js
+                        - Django
+                        -->
         </main>
-
+        <br>
         <div>
-            <footer class="py-3 my-4 border-top text-center">
-                <p>Anar Bayanzul</p>
+            <footer class="py-3 my-6 border-top text-center text-bg-dark">
+                <p class="text-my_indigo">Anar Bayanzul</p>
             </footer>
         </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>

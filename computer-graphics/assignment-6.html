@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+
+attribute vec3 a_position;
+uniform mat4 u_mvMatrix;
+uniform mat4 u_projMatrix;
+
+// Lighting
+varying vec4 v_fcolor;
+uniform mat3 u_nMatrix;
+attribute vec4 a_vNormal;
+uniform vec4 u_ambientProduct, u_diffuseProduct, u_specularProduct;
+uniform vec4 u_lightPosition;
+uniform float u_shininess;
+
+// Texture
+attribute vec2 a_TextureCoord;
+varying vec2 v_TextureCoord;
+
+
+void main() {
+    v_TextureCoord = a_TextureCoord;
+
+    //gl_Position = u_projMatrix * u_mvMatrix * vec4(a_position, 1.0);
+
+    vec3 pos = (u_mvMatrix * vec4(a_position, 1.0)).xyz;
+
+    vec3 L; // Vector from vertex position to light source
+
+    vec3 lightPositionES;
+
+    // check for directional light
+    if (u_lightPosition.w == 0.0)
+      // direction (vector)
+      // for directional light, could assume in either object or eye space
+      L = normalize( u_lightPosition.xyz );
+    else
+    {
+      // position (point)
+      // transform light position from object space to eye space
+      lightPositionES = (u_mvMatrix * u_lightPosition).xyz;
+      //lightPositionES = u_lightPosition.xyz;
+      L = normalize( lightPositionES - pos);
+      //L = normalize( lightPosition.xyz - pos );
+    }
+    vec3 E = -normalize(pos); // Eye
+    //vec3 H = normalize(L + E);
+    //vec3 N = normalize(u_nMatrix * a_vNormal.xyz);
+    vec4 NN = a_vNormal;
+    //vec3 NN = transpose(inverse(u_mvMatrix));
+    vec3 N = normalize((u_mvMatrix * NN).xyz);
+    vec3 R = normalize(-reflect(L, N));
+
+
+    vec4 ambient = u_ambientProduct;
+    float Kd = max( dot(L, N), 0.0 );
+    vec4  diffuse = Kd*u_diffuseProduct;
+    float Ks = pow( max(dot(E, R), 0.0), u_shininess );
+    vec4  specular = Ks * u_specularProduct;
+    if( dot(L, N) < 0.0 ) {
+        specular = vec4(0.0, 0.0, 0.0, 1.0);
+    }
+
+    gl_Position = u_projMatrix * u_mvMatrix * vec4(a_position, 1.0);
+
+    v_fcolor = ambient + diffuse + specular;
+    //v_fcolor = diffuse + ambient;
+    //v_fcolor.rgb = N;
+    v_fcolor.a = 1.0;
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+varying vec4 v_fcolor;
+//uniform vec3 u_color;
+
+// Texture
+varying vec2 v_TextureCoord;
+uniform sampler2D u_TextureSampler;
+
+
+void main() {
+    vec4 textureColor = texture2D(u_TextureSampler, vec2(v_TextureCoord.s, v_TextureCoord.t));
+    gl_FragColor = vec4(textureColor.rgb * v_fcolor.rgb, textureColor.a);
+
+    //gl_FragColor = vec4(u_color, 1.0);
+    //gl_FragColor = vec4(u_color, 1.0) * v_fcolor;
+}
+</script>
+
+<script type="text/javascript" src="./Common/webgl-utils.js"></script>
+<script type="text/javascript" src="./Common/initShaders.js"></script>
+<script type="text/javascript" src="./Common/MV.js"></script>
+<script type="text/javascript" src="trackball.js"></script>
+<script type="text/javascript" src="assignment-6.js"></script>
+</head>
+
+<body>
+    <canvas id="gl-canvas" width="600px" height="400px">
+    Oops ... your browser doesn't support the HTML5 canvas element
+    </canvas>
+    <div id="customization" style="display:none;">
+        <br><br>
+        <button id="incdpf">Inc DPF</button>
+        <button id="decdpf">Dec DPF</button>
+        <form>
+            <input type="radio" name="function" id="orbon" checked>Orbit On
+            <input type="radio" name="function" id="orboff">Orbit Off
+        </form>
+        <form>
+            <input type="radio" name="function" id="dayon" checked>Day On
+            <input type="radio" name="function" id="dayoff">Day Off
+        </form>
+        <form>
+            <input type="radio" name="function" id="animon" checked>Animation On
+            <input type="radio" name="function" id="animoff">Animation Off
+        </form>
+        <!--- The statistics are printed here. --->
+        <p id="printDay"></p>
+        <div>
+            <p>R</p>
+            <input type="range" min="0" max="100" value="90" class="slider" id="rValue">
+            <p>G</p>
+            <input type="range" min="0" max="100" value="90" class="slider" id="gValue">
+            <p>B</p>
+            <input type="range" min="0" max="100" value="90" class="slider" id="bValue">
+        </div>
+    </div>
+</body>
+</html>
