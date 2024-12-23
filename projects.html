@@ -63,11 +63,11 @@
         <main>
             <div class="container-fluid">
                 <hr />
-                <div class="row" id="WebGL">
+                <div class="row" id="WebGL" style="width:40%;min-width:600px;margin:auto;">
                     <h1 class="text-center">WebGL Orrery</h1>
                     <p class="text-center text-my_blue">Drag in frame to move orrery!</p>
                     <div class="row">
-                        <p class="text-center"><iframe id="orrery_frame" src="/computer-graphics/assignment-6.html" title="Orrery" width="608" height="420"></iframe></p>
+                        <p class="text-center"><iframe id="orrery_frame" src="/computer-graphics/assignment-6.html" title="Orrery" width="610" height="420"></iframe></p>
                         <h2>Description</h2>
                         <p>Understands the architecture of the graphics pipeline and the key stages in it, including the vertex processor, clipper and primitive assembler, rasterizer, and fragment processor.</p>
                         <p>Above is an interactive 3D WebGL program with geometric modeling, lighting and shading, and texture mapping made using shader-based GLSL techiniques.</p>
@@ -75,25 +75,25 @@
                 </div>
                 <hr />
                 <br>
-                <div class="row" id="AI BG">
+                <div class="row" id="AI BG" style="width:40%;min-width:600px;margin:auto;">
                     <h1 class="text-center">AI Board Game</h1>
                     <p class="text-center text-my_blue"><em>Note: cannot load on static website</em></p>
-                    <img src="static/images/Tak visualization.png" style="width:50%;margin-left:auto;margin-right:auto;" alt="Tak board visuals">
+                    <img src="static/images/Tak visualization.png" style="width:90%;margin-left:auto;margin-right:auto;" alt="Tak board visuals">
                     <p>This is a breadth first search engine using alpha-beta pruning and several custom heuristics and simulated annealing for an abstract board game similar to Chess called Tak. The search algorithm is implemented in Python with the graphics in Three.js.</p>
-                    <img src="static/images/simulated annealing graph.png" style="width:40%;margin-left:auto;margin-right:auto;" alt="Simulated Aneealing Graph">
+                    <img src="static/images/simulated annealing graph.png" style="width:70%;margin-left:auto;margin-right:auto;" alt="Simulated Aneealing Graph">
                     <p>Above is a visualization of simulated aneealing performed for weightings of three implemented heuristics for the search algorithm.</p>
-                    <img src="static/images/backend board.png" style="width:40%;margin-left:auto;margin-right:auto;" alt="Backend board">
+                    <img src="static/images/backend board.png" style="width:80%;margin-left:auto;margin-right:auto;" alt="Backend board">
                     <p>Above is the Python backend view of board, for more information, links provided below.</p>
                     <p>To learn more, go to the <a href="https://en.wikipedia.org/wiki/Tak_(game)">Tak wiki page.</a></p>
                     <p>To interact, go to the <a href="https://github.com/AnarBayanzul/tak">Github repository.</a></p>
                 </div>
                 <hr />
                 <br>
-                <div class="row" id="vfx">
+                <div class="row" id="vfx" style="width:40%;min-width:600px;margin:auto;">
                     <h1 class="text-center">Visual Effects</h1>
                     <p>Learned various 3D and simulation skills in Maya, Substance Painter, and Blender. Started off with basic modeling, texturing, and materials, but over time, learned more advance techiniques like substance painting, rigging, keyframing, forward and inverse kinematics, and also scripting custom tools.</p>
                     <p>Realistic 3D modeling and material rendering. Learned about how to make light interact with custom materials, like subsurface scattering, and reflection to make high-definition lighting.</p>
-                    <div id="pharmaceuticalCarousel" class="carousel slide">
+                    <div id="pharmaceuticalCarousel" class="carousel slide" style="width:70%;margin:auto;">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="static/images/syringe sample 4.jpg" class="d-block w-100" alt="render of syringe">
@@ -114,17 +114,24 @@
                                 <img src="static/images/vial sample.jpg" class="d-block w-100" alt="render of vial no label">
                             </div>
                         </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#pharmaceuticalCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#pharmaceuticalCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#pharmaceuticalCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#pharmaceuticalCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                     <p>Light-hearted animation sound effects and music. Learned about rigging human models, weight painting, and correcting motion capture animations.</p>
-                    <img src="static/images/backend board.png" style="width:40%;margin-left:auto;margin-right:auto;" alt="Backend board">
+                    <video style="width:50%;" controls muted>
+                        <source src="static/videos/watamelon.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                    <video style="width:50%;" controls muted>
+                        <source src="static/videos/abayanzu.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
                     <p>Also created animations with physics-based simulations using fields and solvers.</p>
                 </div>
 
